@@ -1,3 +1,16 @@
 The Little Mermaid
 
-FAR out in the ocean, where the water is as blue as the prettiest cornflower, and as clear as crystal, it is very, very deep; so deep, indeed, that no cable could fathom it: many church steeples, piled one upon another, would not reach from the ground beneath to the surface of the water above. There dwell the Sea King and his subjects. We must not imagine that there is nothing at the bottom of the sea but bare yellow sand. No, indeed; the most singular flowers and plants grow there; the leaves and stems of which are so pliant, that the slightest agitation of the water causes them to stir as if they had life. Fishes, both large and small, glide between the branches, as birds fly among the trees here upon land. In the deepest spot of all, stands the castle of the Sea King. Its walls are built of coral, and the long, gothic windows are of the clearest amber. The roof is formed of shells, that open and close as the water flows over them. Their appearance is very beautiful, for in each lies a glittering pearl, which would be fit for the diadem of a queen.
+FAR out in the ocean, where the water is as blue as the prettiest cornflower,
+and as clear as crystal, it is very, very deep; so deep, indeed,
+that no cable could fathom it: many church steeples, piled one upon another,
+would not reach from the ground beneath to the surface of the water above.
+There dwell the Sea King and his subjects. We must not imagine that there is nothing
+at the bottom of the sea but bare yellow sand. No, indeed; the most singular flowers
+and plants grow there; the leaves and stems of which are so pliant,
+that the slightest agitation of the water causes them to stir as if they had life.
+Fishes, both large and small, glide between the branches, as birds fly among the trees here upon land.
+In the deepest spot of all, stands the castle of the Sea King.
+Its walls are built of coral, and the long, gothic windows are of the clearest amber.
+The roof is formed of shells, that open and close as the water flows over them.
+Their appearance is very beautiful, for in each lies a glittering pearl,
+which would be fit for the diadem of a queen.
