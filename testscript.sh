@@ -1,11 +1,11 @@
 #! /bin/bash
 
 echo
-echo "Hi! My name is BASH-SCRIPT and I was created by Elena Weber."
+echo "Hi! My name is BASH-SHELL-SCRIPT and I was created by Elena Weber."
 echo
 
 # display all the folders and files in the current folder
-echo "Here is the list of folders and files in the current folder:"
+echo "Here is the list of all folders and files in the current folder:"
 echo
 for anyfile in *;
 do
@@ -49,22 +49,26 @@ echo
 
 echo
 echo "All files and folders:"
-for eachff in $(find . -type d) ;
+echo
+
+# exclude any hidden files and folders
+for eachff in $(find . -type d ! -path '*/\.*') ;
 do
-    if [ $eachff != "./.git/*" ]; then
-        echo "This is the folder: $eachff"
+    if [ $eachff != "./.git" ]; then
+        echo "*** Searching in folder: $eachff ***"
         for myfile in $eachff/* ;
         do
             if [ -f "$myfile" ]; then
-                echo "This is the file's path: $myfile"
+                echo "This file's path: $myfile"
                 present=$(grep -ni "once" "$myfile")
                 if [ -z "$present" ]; then
-                    echo "The searched word was NOT found"
+                    filename=$(basename "$myfile")
+                    echo "The searched word was NOT found in "$filename""
                     echo
                 else
-                    echo "The searched word was found"
-                        filename=$(basename $myfile)
-                    echo "$filename"
+                    filename=$(basename "$myfile")
+                    echo "The searched word was FOUND in "$filename""
+                    # echo "$filename"
                     echo
                 fi
             fi
