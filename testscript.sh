@@ -15,9 +15,8 @@ echo
 #     echo "$namefile"
 # done
 
-read -p "What word are you looking for? " searchrequest
-echo "$searchrequest"
-
+# set up the searched word
+read -p "What word are you looking for? " searchword
 echo
 echo "Searching in all folders and files (excl. hidden ones):"
 echo
@@ -34,7 +33,7 @@ do
                 # grep = find
                 # -n = show the line on which the word is
                 # -i = ignore big/small letters in search
-                searched=$(grep -ni "once" "$anything")
+                searched=$(grep -ni "$searchword" "$anything")
                 if [ -z "$searched" ]; then
                     filename=$(basename "$anything")
                     echo "NOT found in -> "$filename" <-"
