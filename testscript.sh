@@ -1,7 +1,7 @@
 #! /bin/bash
 
 echo
-echo "Hi! My name is BASH-SHELL-SCRIPT-THE-SECOND and I was created by Elena Weber."
+echo "Hi! My name is SCRIPT-THE-SECOND and I was created by Elena Weber."
 echo
 
 # display all the folders and files
@@ -18,13 +18,15 @@ echo
 # set up the searched word
 read -p "What word are you looking for? " searchword
 echo
-echo "Searching in all folders and files (excl. hidden ones):"
-echo
-
-# exclude any hidden files and folders from search
-for folder in $(find . -type d ! -path '*/\.*') ;
-do
-    # if [ $folder != "./.git" ]; then
+if [ -z $searchword ]; then # if user doen't type anything
+    echo "Please restart the script and type the word you're looking for."
+    echo
+else
+    echo "Searching for -> $searchword <- in all folders and files (excl. hidden ones):"
+    echo
+    # exclude any hidden files and folders from search
+    for folder in $(find . -type d ! -path '*/\.*') ;
+    do
         echo "-> -> -> Searching in folder: $folder <- <- <-"
         echo
         for anything in $folder/* ;
@@ -40,12 +42,12 @@ do
                     echo
                 else
                     filename=$(basename "$anything")
-                    echo "FOUND in -> "$filename" <- on line:"
+                    echo "FOUND in -> "$filename" <- on line(s):"
                     echo "$searched"
                     echo
                 fi
             fi
         done
-    # fi
-    echo
-done
+        echo
+    done
+fi
