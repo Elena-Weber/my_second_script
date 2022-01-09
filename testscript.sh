@@ -1,11 +1,16 @@
 #! /bin/bash
 
 echo
+echo " - - - - - - - - - - - - - - - "
+echo
 echo "Hi! My name is SCRIPT-THE-SECOND and I was created by Elena Weber."
+echo "My job is to help you search for any word you want, and I love it!"
+echo "I look through all the files in the current folder."
+echo "Let's start! :)"
 echo
 
 # display all the folders and files (excl. *sh and hidden ones)
-echo "Here is the list of all folders and files in the current folder:"
+echo "Here is the list of all folders and files I've found in the current folder:"
 echo
 find . -type f ! -name '*.sh' ! -path '*/\.*' -exec echo "* {}" \;
 echo
@@ -46,3 +51,5 @@ else
         echo
     done
 fi
+
+echo "Would you like to search for another word? (y/N)"
