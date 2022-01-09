@@ -15,6 +15,10 @@ echo
 find . -type f ! -name '*.sh' ! -path '*/\.*' -exec echo "* {}" \;
 echo
 
+# count all files excluding hidden files and folders
+echo "Total: $(find . -type f ! -path '*/\.*' ! -name '*.sh' | wc -l) files"
+echo
+
 # set up the searched word
 read -p "What word are you looking for? " searchword
 echo
@@ -22,7 +26,7 @@ if [ -z $searchword ]; then # if user doesn't type anything
     echo "Please restart the script and type the word you're looking for."
     echo
 else
-    echo "Searching for -> $searchword <- in all folders and files (excl. hidden ones):"
+    echo "Searching for -> $searchword <- :"
     echo
     # exclude any hidden files and folders from search
     for folder in $(find . -type d ! -path '*/\.*' ! -name '*.sh') ;
@@ -52,4 +56,20 @@ else
     done
 fi
 
-echo "Would you like to search for another word? (y/N)"
+read -p "Would you like to search for another word? (y/N) " answer
+echo
+case $answer in
+    "")
+        echo "No problem. Thanks for using me! Have a great one!"
+        ;;
+    "y" | "Y")
+        echo "What word are you looking for?"
+        ;;
+    "n" | "N")
+        echo "No problem. Thanks for using me! Have a great one!"
+        ;;
+    *)
+        echo "I'm sorry I don't understand. Thanks for using me! Have a great one!"
+        ;;
+esac
+echo
