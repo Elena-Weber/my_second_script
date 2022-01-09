@@ -17,7 +17,8 @@ find . -type f ! -name '*.sh' ! -path '*/\.*' -exec echo "* {}" \;
 echo
 
 # count all files excluding hidden files and folders
-echo "Total: $(find . -type f ! -path '*/\.*' ! -name '*.sh' | wc -l) files"
+total=$(find . -type f ! -path '*/\.*' ! -name '*.sh' | wc -l)
+echo "Total: $total files"
 echo
 
 # set up the searched word
@@ -26,7 +27,7 @@ echo
 
 myfunction(){
     if [ -z $searchword ]; then # if user doesn't type anything
-        echo "Please restart the script and type the word you're looking for."
+        echo "I'm sorry I didn't get it."
         echo
     else
         echo "Searching for -> $searchword <- :"
