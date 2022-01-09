@@ -16,5 +16,5 @@ That simply means that you computer blocked the execution of the script. It's ok
 To fix it, you need to allow execution of the script on your machine. Run this in your terminal:
 #### chmod +x testscript.sh
 This command will allow execution of the script and you only need to do it once (the very first time). After that, try
-#### ./testscript
+#### ./testscript.sh
 in your terminal again. Voila!
